@@ -1,5 +1,5 @@
 ﻿
-namespace StandardWorkTime
+namespace ShiftAttend
 {
     partial class SearchSubForm
     {

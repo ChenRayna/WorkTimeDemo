@@ -1,5 +1,5 @@
 ﻿
-namespace StandardWorkTime
+namespace ExceptionWorkTime
 {
     partial class SearchSubForm
     {

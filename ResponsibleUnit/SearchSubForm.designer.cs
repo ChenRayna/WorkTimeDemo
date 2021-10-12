@@ -1,5 +1,5 @@
 ﻿
-namespace StandardWorkTime
+namespace ResponsibleUnit
 {
     partial class SearchSubForm
     {

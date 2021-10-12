@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StandardWorkTime
+namespace ResponibleUnit
 {
-    public partial class FunSubForm : Form
+    public partial class ResponibleUnit : Form
     {
-        public FunSubForm()
+        public ResponibleUnit()
         {
             InitializeComponent();
         }

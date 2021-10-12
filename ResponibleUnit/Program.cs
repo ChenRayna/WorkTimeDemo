@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace StandardWorkTime
+namespace ResponibleUnit
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace StandardWorkTime
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StandardWorkTime());
+            Application.Run(new ResponibleUnit());
         }
     }
 }

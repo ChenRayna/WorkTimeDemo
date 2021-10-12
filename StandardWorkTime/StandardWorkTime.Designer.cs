@@ -1,5 +1,5 @@
 ﻿
-namespace Demo001
+namespace StandardWorkTime
 {
     partial class StandardWorkTime
     {
@@ -41,7 +41,7 @@ namespace Demo001
             this.labSection = new System.Windows.Forms.Label();
             this.txtMachine = new System.Windows.Forms.TextBox();
             this.labMachine = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtLine = new System.Windows.Forms.TextBox();
             this.labLine = new System.Windows.Forms.Label();
             this.txtStandardWorkTime = new System.Windows.Forms.TextBox();
             this.labStandardWorkTime = new System.Windows.Forms.Label();
@@ -50,15 +50,15 @@ namespace Demo001
             this.btnMachine = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
             this.panTop = new System.Windows.Forms.Panel();
+            this.labHour = new System.Windows.Forms.Label();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
-            this.btnModify = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnModify = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.btnSearch = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.panTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -118,13 +118,13 @@ namespace Demo001
             this.labMachine.TabIndex = 4;
             this.labMachine.Text = "機台";
             // 
-            // textBox3
+            // txtLine
             // 
-            this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox3.Location = new System.Drawing.Point(474, 21);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 34);
-            this.textBox3.TabIndex = 7;
+            this.txtLine.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtLine.Location = new System.Drawing.Point(474, 21);
+            this.txtLine.Name = "txtLine";
+            this.txtLine.Size = new System.Drawing.Size(165, 34);
+            this.txtLine.TabIndex = 7;
             // 
             // labLine
             // 
@@ -197,7 +197,7 @@ namespace Demo001
             // 
             // panTop
             // 
-            this.panTop.Controls.Add(this.label1);
+            this.panTop.Controls.Add(this.labHour);
             this.panTop.Controls.Add(this.labPartNo);
             this.panTop.Controls.Add(this.txtPartNo);
             this.panTop.Controls.Add(this.btnLine);
@@ -211,12 +211,22 @@ namespace Demo001
             this.panTop.Controls.Add(this.txtStandardWorkTime);
             this.panTop.Controls.Add(this.labLine);
             this.panTop.Controls.Add(this.labStandardWorkTime);
-            this.panTop.Controls.Add(this.textBox3);
+            this.panTop.Controls.Add(this.txtLine);
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 0);
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(1002, 173);
             this.panTop.TabIndex = 15;
+            // 
+            // labHour
+            // 
+            this.labHour.AutoSize = true;
+            this.labHour.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labHour.Location = new System.Drawing.Point(644, 73);
+            this.labHour.Name = "labHour";
+            this.labHour.Size = new System.Drawing.Size(64, 25);
+            this.labHour.TabIndex = 19;
+            this.labHour.Text = "(小時)";
             // 
             // dgvData
             // 
@@ -240,7 +250,7 @@ namespace Demo001
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvData.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvData.Location = new System.Drawing.Point(0, 211);
+            this.dgvData.Location = new System.Drawing.Point(0, 206);
             this.dgvData.Name = "dgvData";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -254,7 +264,7 @@ namespace Demo001
             dataGridViewCellStyle5.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dgvData.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvData.RowTemplate.Height = 31;
-            this.dgvData.Size = new System.Drawing.Size(1002, 501);
+            this.dgvData.Size = new System.Drawing.Size(1002, 506);
             this.dgvData.TabIndex = 16;
             // 
             // toolStrip1
@@ -269,7 +279,7 @@ namespace Demo001
             this.btnSearch});
             this.toolStrip1.Location = new System.Drawing.Point(0, 173);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1002, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1002, 33);
             this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -279,9 +289,14 @@ namespace Demo001
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(34, 33);
+            this.btnAdd.Size = new System.Drawing.Size(34, 28);
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // btnModify
             // 
@@ -289,9 +304,14 @@ namespace Demo001
             this.btnModify.Image = ((System.Drawing.Image)(resources.GetObject("btnModify.Image")));
             this.btnModify.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(34, 33);
+            this.btnModify.Size = new System.Drawing.Size(34, 28);
             this.btnModify.Text = "Modify";
             this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // btnDelete
             // 
@@ -299,19 +319,9 @@ namespace Demo001
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(34, 33);
+            this.btnDelete.Size = new System.Drawing.Size(34, 28);
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // btnSearch
             // 
@@ -320,19 +330,9 @@ namespace Demo001
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(34, 33);
+            this.btnSearch.Size = new System.Drawing.Size(34, 28);
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(644, 73);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "(小時)";
             // 
             // StandardWorkTime
             // 
@@ -364,7 +364,7 @@ namespace Demo001
         private System.Windows.Forms.Label labSection;
         private System.Windows.Forms.TextBox txtMachine;
         private System.Windows.Forms.Label labMachine;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtLine;
         private System.Windows.Forms.Label labLine;
         private System.Windows.Forms.TextBox txtStandardWorkTime;
         private System.Windows.Forms.Label labStandardWorkTime;
@@ -381,7 +381,7 @@ namespace Demo001
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btnSearch;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labHour;
     }
 }
 

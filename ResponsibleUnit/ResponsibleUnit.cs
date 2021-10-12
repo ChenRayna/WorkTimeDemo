@@ -7,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace StandardWorkTime
+namespace ResponsibleUnit
 {
-    public partial class StandardWorkTime : Form
+    public partial class ResponsibleUnit : Form
     {
-        public StandardWorkTime()
+        public ResponsibleUnit()
         {
             InitializeComponent();
         }
 
-        private void StandardWorkTime_Load(object sender, EventArgs e)
+        private void ResponsibleUnit_Load(object sender, EventArgs e)
         {
             SetDataGridViewProperty();
         }
@@ -34,14 +34,12 @@ namespace StandardWorkTime
         {
             using (DataTable table = new DataTable())
             {
-                table.Columns.Add("料號", typeof(string));
-                table.Columns.Add("機台", typeof(string));
-                table.Columns.Add("線別 ", typeof(string));
-                table.Columns.Add("標準工時", typeof(float));
-                table.Rows.Add("123456", "Coating", "自動化R1", 0.04);
-                table.Rows.Add("QWERTY", "Coating", "自動化R1", 0.99);
-                table.Rows.Add("ASDFGH", "Coating", "自動化R1", .073);
-                table.Rows.Add("ZXCVBN", "Coating", "自動化R1", .022);
+                table.Columns.Add("單位代碼", typeof(string));
+                table.Columns.Add("單位名稱", typeof(string));
+                table.Columns.Add("建立日期", typeof(string));
+                table.Rows.Add("R1", "營運中心", "2000/01/01");
+                table.Rows.Add("R2", "製造一部", "2000/01/02");
+                table.Rows.Add("R3", "倉庫", "2000/01/03");
                 return table;
             }
         }
@@ -60,11 +58,6 @@ namespace StandardWorkTime
         private void btnSearch_Click(object sender, EventArgs e)
         {
             SearchData();
-        }
-
-        private void btnPart_Click(object sender, EventArgs e)
-        {
-            OpenSubForm();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -87,6 +80,11 @@ namespace StandardWorkTime
                                    "刪除確認", MessageBoxButtons.YesNo,
                                    MessageBoxIcon.Question,
                                    MessageBoxDefaultButton.Button1, 0);
+        }
+
+        private void btnUnit_Click(object sender, EventArgs e)
+        {
+            OpenSubForm();
         }
     }
 }

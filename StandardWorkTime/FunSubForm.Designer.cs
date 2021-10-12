@@ -1,5 +1,5 @@
 ﻿
-namespace Demo001
+namespace StandardWorkTime
 {
     partial class FunSubForm
     {
@@ -35,13 +35,17 @@ namespace Demo001
             this.txtSection = new System.Windows.Forms.TextBox();
             this.labMachine = new System.Windows.Forms.Label();
             this.txtMachine = new System.Windows.Forms.TextBox();
-            this.txtStandardWorkTime = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
             this.labLine = new System.Windows.Forms.Label();
-            this.labStandardWorkTime = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnPart = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labTime = new System.Windows.Forms.Label();
+            this.txtLine = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPart = new System.Windows.Forms.Button();
+            this.btnSection = new System.Windows.Forms.Button();
+            this.btnMachine = new System.Windows.Forms.Button();
+            this.btnLine = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labPartNo
@@ -98,13 +102,13 @@ namespace Demo001
             this.txtMachine.Size = new System.Drawing.Size(165, 34);
             this.txtMachine.TabIndex = 11;
             // 
-            // txtStandardWorkTime
+            // txtTime
             // 
-            this.txtStandardWorkTime.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtStandardWorkTime.Location = new System.Drawing.Point(165, 218);
-            this.txtStandardWorkTime.Name = "txtStandardWorkTime";
-            this.txtStandardWorkTime.Size = new System.Drawing.Size(165, 34);
-            this.txtStandardWorkTime.TabIndex = 15;
+            this.txtTime.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtTime.Location = new System.Drawing.Point(165, 218);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(165, 34);
+            this.txtTime.TabIndex = 15;
             // 
             // labLine
             // 
@@ -116,43 +120,43 @@ namespace Demo001
             this.labLine.TabIndex = 12;
             this.labLine.Text = "線別";
             // 
-            // labStandardWorkTime
+            // labTime
             // 
-            this.labStandardWorkTime.AutoSize = true;
-            this.labStandardWorkTime.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labStandardWorkTime.Location = new System.Drawing.Point(50, 221);
-            this.labStandardWorkTime.Name = "labStandardWorkTime";
-            this.labStandardWorkTime.Size = new System.Drawing.Size(92, 25);
-            this.labStandardWorkTime.TabIndex = 14;
-            this.labStandardWorkTime.Text = "標準工時";
+            this.labTime.AutoSize = true;
+            this.labTime.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labTime.Location = new System.Drawing.Point(50, 221);
+            this.labTime.Name = "labTime";
+            this.labTime.Size = new System.Drawing.Size(92, 25);
+            this.labTime.TabIndex = 14;
+            this.labTime.Text = "標準工時";
             // 
-            // textBox3
+            // txtLine
             // 
-            this.textBox3.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox3.Location = new System.Drawing.Point(165, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 34);
-            this.textBox3.TabIndex = 13;
+            this.txtLine.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtLine.Location = new System.Drawing.Point(165, 173);
+            this.txtLine.Name = "txtLine";
+            this.txtLine.Size = new System.Drawing.Size(165, 34);
+            this.txtLine.TabIndex = 13;
             // 
-            // btnPart
+            // btnOK
             // 
-            this.btnPart.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.btnPart.Location = new System.Drawing.Point(55, 299);
-            this.btnPart.Name = "btnPart";
-            this.btnPart.Size = new System.Drawing.Size(101, 43);
-            this.btnPart.TabIndex = 16;
-            this.btnPart.Text = "OK";
-            this.btnPart.UseVisualStyleBackColor = true;
+            this.btnOK.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.btnOK.Location = new System.Drawing.Point(55, 299);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(101, 43);
+            this.btnOK.TabIndex = 16;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 10F);
-            this.button1.Location = new System.Drawing.Point(229, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 43);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.btnCancel.Location = new System.Drawing.Point(229, 299);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(101, 43);
+            this.btnCancel.TabIndex = 17;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -164,18 +168,62 @@ namespace Demo001
             this.label1.TabIndex = 18;
             this.label1.Text = "(小時)";
             // 
+            // btnPart
+            // 
+            this.btnPart.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.btnPart.Location = new System.Drawing.Point(334, 40);
+            this.btnPart.Name = "btnPart";
+            this.btnPart.Size = new System.Drawing.Size(37, 34);
+            this.btnPart.TabIndex = 19;
+            this.btnPart.Text = "...";
+            this.btnPart.UseVisualStyleBackColor = true;
+            // 
+            // btnSection
+            // 
+            this.btnSection.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.btnSection.Location = new System.Drawing.Point(334, 84);
+            this.btnSection.Name = "btnSection";
+            this.btnSection.Size = new System.Drawing.Size(37, 34);
+            this.btnSection.TabIndex = 20;
+            this.btnSection.Text = "...";
+            this.btnSection.UseVisualStyleBackColor = true;
+            // 
+            // btnMachine
+            // 
+            this.btnMachine.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.btnMachine.Location = new System.Drawing.Point(334, 128);
+            this.btnMachine.Name = "btnMachine";
+            this.btnMachine.Size = new System.Drawing.Size(37, 34);
+            this.btnMachine.TabIndex = 21;
+            this.btnMachine.Text = "...";
+            this.btnMachine.UseVisualStyleBackColor = true;
+            // 
+            // btnLine
+            // 
+            this.btnLine.Font = new System.Drawing.Font("微軟正黑體", 10F);
+            this.btnLine.Location = new System.Drawing.Point(334, 173);
+            this.btnLine.Name = "btnLine";
+            this.btnLine.Size = new System.Drawing.Size(37, 34);
+            this.btnLine.TabIndex = 22;
+            this.btnLine.Text = "...";
+            this.btnLine.UseVisualStyleBackColor = true;
+            // 
             // FunSubForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 377);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(414, 377);
+            this.Controls.Add(this.btnLine);
+            this.Controls.Add(this.btnMachine);
+            this.Controls.Add(this.btnSection);
             this.Controls.Add(this.btnPart);
-            this.Controls.Add(this.txtStandardWorkTime);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.txtTime);
             this.Controls.Add(this.labLine);
-            this.Controls.Add(this.labStandardWorkTime);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.labTime);
+            this.Controls.Add(this.txtLine);
             this.Controls.Add(this.labPartNo);
             this.Controls.Add(this.txtPartNo);
             this.Controls.Add(this.labSection);
@@ -199,12 +247,16 @@ namespace Demo001
         private System.Windows.Forms.TextBox txtSection;
         private System.Windows.Forms.Label labMachine;
         private System.Windows.Forms.TextBox txtMachine;
-        private System.Windows.Forms.TextBox txtStandardWorkTime;
+        private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.Label labLine;
-        private System.Windows.Forms.Label labStandardWorkTime;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button btnPart;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labTime;
+        private System.Windows.Forms.TextBox txtLine;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPart;
+        private System.Windows.Forms.Button btnSection;
+        private System.Windows.Forms.Button btnMachine;
+        private System.Windows.Forms.Button btnLine;
     }
 }
